@@ -17,7 +17,7 @@ class NewsController extends Controller
     //Varidationを行う
     $this->validate($request, News::$rules);
     $news = new News;
-    $from = $request->all();
+    $form = $request->all();
 
       if (isset($form['image'])) {
         $path = $request->file('image')->store('public/image');

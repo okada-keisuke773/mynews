@@ -16,17 +16,18 @@
                     </ul>
                 @endif
                 名前
-                <input type="text" name="my_name">
+                <input type="text" name="name" value="{{ old('name')}}">
                 <br>
                 性別
                 <input type="radio" name="gender" value="男性" >男性
                 <input type="radio" name="gender" value="女性" >女性
                 <br>
                 趣味
-                <input type="text" name="hobby">
-                <p>自己紹介</p>
-                <textarea name="introduction" cols="30" rows="10"></textarea>
+                <input type="text" name="hobby" value="{{ old('hobby')}}">
+               <p>自己紹介</p>
+                <textarea name="introduction" cols="30" rows="10">{{ old('introduction')}}</textarea>
                 <br>
+                {{ csrf_field()}}
                 <input type="submit" value="送信">
 
             </form>
